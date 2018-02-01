@@ -11,7 +11,7 @@
 #include "main.h"
 #include "util.h"
 #include "amount.h"
-
+#include "globals.h"
 #include <boost/assign/list_of.hpp>
 
 using namespace boost::assign;
@@ -86,11 +86,11 @@ public:
         pchMessageStart[2] = 0xd6;
         pchMessageStart[3] = 0xc8;
         vAlertPubKey = ParseHex("040fd972dba056779d9f998cba8d5866e47fb875fd8cb9c4d36baf88db738a6ffbc581e0fad7f2f129c7f814d81baeda567a3735aaf0bfbc339f40359d4a52b4bf");
-        nDefaultPort = 9898;
-        nRPCPort = 9899;
+        nDefaultPort = DEFAULT_PORT;
+        nRPCPort = DEFAULT_PORT;
         nProofOfWorkLimit = uint256S("000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         nProofOfStakeLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
-        nTargetSpacing = 64;
+        nTargetSpacing = TARGET_SPACKING;
         nTargetTimespan = 7 * 24 * 60 * 60; // one week
 
 	genesis = CreateGenesisBlock(1486045800, 28884498, 0x1e00ffff, 1, (1 * COIN));
@@ -99,9 +99,9 @@ public:
         assert(hashGenesisBlock == uint256("0x0000004cf5ffbf2e31a9aa07c86298efb01a30b8911b80af7473d1114715084b"));
         assert(genesis.hashMerkleRoot == uint256("0x7af2e961c5262cb0411edcb7414ab7178133fc06257ceb47d349e4e5e35e2d40"));
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,113);
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,88);
-        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,153);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,125);
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,90);
+        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,163);
         base58Prefixes[STEALTH_ADDRESS] = std::vector<unsigned char>(1,40);
         base58Prefixes[EXT_PUBLIC_KEY] = list_of(0x04)(0x88)(0xB2)(0x1E).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[EXT_SECRET_KEY] = list_of(0x04)(0x88)(0xAD)(0xE4).convert_to_container<std::vector<unsigned char> >();
@@ -113,11 +113,11 @@ public:
         convertSeed6(vFixedSeeds, pnSeed6_main, ARRAYLEN(pnSeed6_main));
 
 	nPoolMaxTransactions = 3;
-        strStashedsendPoolDummyAddress = "iqbMeTpdFfxiNcWHn255T2TneJTrUECCBE";
-        nLastPOWBlock 	= 1000;
+        strStashedsendPoolDummyAddress = STASHED_DUMMY_ADDRESS; 
+        nLastPOWBlock 	= LAST_POW_BLOCK; 
         
-        nFork1Height = 176500;
-        nFork1Time = 1497541280;
+        //nFork1Height = 176500;
+        //nFork1Time = 1497541280;
     }
 
     virtual const CBlock& GenesisBlock() const { return genesis; }

@@ -51,22 +51,33 @@ int64_t GetCoinbaseValue(int nHeight, CAmount nFees)
 // miner's coin stake reward based on coin age spent (coin-days)
 int64_t GetCoinstakeValue(int64_t nCoinAge, CAmount nFees, int nHeight)
 {
-	CAmount nSubsidy = 0.2 * COIN;
+        CAmount nSubsidy = nSubsidy = STAKE_VAULE * COIN * 1/10;
 
-	if(nHeight <= 125146) {
-		nSubsidy = 23 * COIN;
-	} else if(nHeight <= 568622) {
-		nSubsidy = 17 * COIN;
-	} else if(nHeight <= 1012098) {
-		nSubsidy = 11.5 * COIN;
-	} else if(nHeight <= 1455574) {
-		nSubsidy = 5.75 * COIN;
-	} else if(nHeight <= 3675950) {
-		nSubsidy = 1.85 * COIN;
-	} else {
-		nSubsidy = 0.2 * COIN;
+        if(nHeight <= BLOCK_PER_MONTH*3) {
+                nSubsidy = STAKE_VAULE * COIN * 5/10;
+        } else if(nHeight <= BLOCK_PER_MONTH*6) {
+                nSubsidy = STAKE_VAULE * COIN * 5/10;
+        } else if(nHeight <= BLOCK_PER_MONTH*9) {
+                nSubsidy = STAKE_VAULE * COIN * 5/10;
+        } else if(nHeight <= BLOCK_PER_MONTH*12) {
+                nSubsidy = STAKE_VAULE * COIN * 4/10;
+        } else if(nHeight <= BLOCK_PER_MONTH*15) {
+                nSubsidy = STAKE_VAULE * COIN * 4/10;
+        } else if(nHeight <= BLOCK_PER_MONTH*18) {
+                nSubsidy = STAKE_VAULE * COIN * 4/10;
+        } else if(nHeight <= BLOCK_PER_MONTH*21) {
+                nSubsidy = STAKE_VAULE * COIN * 3/10;
+        } else if(nHeight <= BLOCK_PER_MONTH*24) {
+                nSubsidy = STAKE_VAULE * COIN * 3/10;
+        } else if(nHeight <= BLOCK_PER_MONTH*27) {
+                nSubsidy = STAKE_VAULE * COIN * 3/10;
+        } else if(nHeight <= BLOCK_PER_MONTH*30) {
+                nSubsidy = STAKE_VAULE * COIN * 2/10;
+        } else if(nHeight <= BLOCK_PER_MONTH*33) {
+                nSubsidy = STAKE_VAULE * COIN * 2/10;
+        } else if(nHeight <= BLOCK_PER_MONTH*36) {
+                nSubsidy = STAKE_VAULE * COIN * 2/10;
 	}
-
     return nSubsidy + nFees;
 }
 
