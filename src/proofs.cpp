@@ -12,6 +12,7 @@
 #include "util.h"
 #include "amount.h"
 #include "checkpoints.h"
+#include "globals.h"
 
 #include <math.h>
 #include <stdint.h> 
@@ -41,9 +42,7 @@ int64_t GetCoinbaseValue(int nHeight, CAmount nFees)
     CAmount nSubsidy = 0;
 
 	if(nHeight == 1) {
-		nSubsidy = 10000000 * COIN;
-	} else if (nHeight < 1000) {
-		nSubsidy = 5000 * COIN;
+		nSubsidy = PREMINING_VALUE * COIN;
 	}
 
     return nSubsidy;
