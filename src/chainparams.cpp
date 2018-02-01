@@ -81,10 +81,10 @@ public:
         // The message start string is designed to be unlikely to occur in normal data.
         // The characters are rarely used upper ASCII, not valid as UTF-8, and produce
         // a large 4-byte int at any alignment.
-        pchMessageStart[0] = 0xc4;
-        pchMessageStart[1] = 0xe1;
-        pchMessageStart[2] = 0xd8;
-        pchMessageStart[3] = 0xec;
+        pchMessageStart[0] = 0xc2;
+        pchMessageStart[1] = 0xe3;
+        pchMessageStart[2] = 0xd6;
+        pchMessageStart[3] = 0xc8;
         vAlertPubKey = ParseHex("040fd972dba056779d9f998cba8d5866e47fb875fd8cb9c4d36baf88db738a6ffbc581e0fad7f2f129c7f814d81baeda567a3735aaf0bfbc339f40359d4a52b4bf");
         nDefaultPort = 9898;
         nRPCPort = 9899;
@@ -99,7 +99,7 @@ public:
         assert(hashGenesisBlock == uint256("0x0000004cf5ffbf2e31a9aa07c86298efb01a30b8911b80af7473d1114715084b"));
         assert(genesis.hashMerkleRoot == uint256("0x7af2e961c5262cb0411edcb7414ab7178133fc06257ceb47d349e4e5e35e2d40"));
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,103);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,113);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,88);
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,153);
         base58Prefixes[STEALTH_ADDRESS] = std::vector<unsigned char>(1,40);
