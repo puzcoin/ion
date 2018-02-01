@@ -41,7 +41,9 @@ int64_t GetCoinbaseValue(int nHeight, CAmount nFees)
     CAmount nSubsidy = 0;
 
 	if(nHeight == 1) {
-		nSubsidy = 16400000 * COIN;
+		nSubsidy = 10000000 * COIN;
+	} else if (nHeight < 1000) {
+		nSubsidy = 5000 * COIN;
 	}
 
     return nSubsidy;
