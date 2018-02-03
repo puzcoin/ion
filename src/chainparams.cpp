@@ -106,7 +106,7 @@ public:
         assert(genesis.hashMerkleRoot == uint256("0xcb4b6f20de95fe94c7608d7c9dbc66d157faebe8790900e453bb5e645211ef2e"));
 
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,103);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,125);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,88);
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,153);
         base58Prefixes[STEALTH_ADDRESS] = std::vector<unsigned char>(1,40);
