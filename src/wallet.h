@@ -869,7 +869,7 @@ public:
             const CTxIn vin = CTxIn(hashTx, i);
 
             if(pwallet->IsSpent(hashTx, i) || pwallet->IsLockedCoin(hashTx, i)) continue;
-            if(fMasterNode && vout[i].nValue == GetMNCollateral(pindexBest->nHeight)*COIN) continue; // do not count MN-like outputs
+            if(fMasterNode && (vout[i].nValue == GetMNCollateral(pindexBest->nHeight)*COIN || vout[i].nValue == GetCellMNCollateral(pindexBest->nHeight)*COIN)) continue; // do not count MN-like outputs
 
             const int rounds = pwallet->GetInputStashedsendRounds(vin);
             if(rounds >=-2 && rounds < nStashedsendRounds) {

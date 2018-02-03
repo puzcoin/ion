@@ -2101,7 +2101,7 @@ bool CStashedSendSigner::IsVinAssociatedWithPubkey(CTxIn& vin, CPubKey& pubkey){
     //if(GetTransaction(vin.prevout.hash, txVin, hash, true)){
     if(GetTransaction(vin.prevout.hash, txVin, hash)){
         BOOST_FOREACH(CTxOut out, txVin.vout){
-            if(out.nValue == GetMNCollateral(pindexBest->nHeight)*COIN){
+            if(out.nValue == GetMNCollateral(pindexBest->nHeight)*COIN || out.nValue == GetCellMNCollateral(pindexBest->nHeight)*COIN){
                 if(out.scriptPubKey == payee2) return true;
             }
         }

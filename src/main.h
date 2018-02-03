@@ -73,7 +73,8 @@ inline int64_t FutureDrift(int64_t nTime, int nHeight) { return IsProtocolV1(nHe
 /** "reject" message codes **/
 static const unsigned char REJECT_INVALID = 0x10;
 
-inline int64_t GetMNCollateral(int nHeight) { return 20000; } // *COIN is added with usage implements
+inline int64_t GetMNCollateral(int nHeight) { return 20000; }//super-masternode // *COIN is added with usage implements
+inline int64_t GetCellMNCollateral(int nHeight) { return 3000; } //cell-masternode
 
 extern CScript COINBASE_FLAGS;
 extern CCriticalSection cs_main;
