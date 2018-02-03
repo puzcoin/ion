@@ -169,8 +169,8 @@ public:
         
 	hashGenesisBlock = genesis.GetHash();
 	
-	assert(hashGenesisBlock == uint256("0x0000002bed128b6b2a62bd8edd4e6f8a414eac38e256aa0194adb8c93fe18132"));		
-	assert(genesis.hashMerkleRoot == uint256("0x24c7b9bada3984f99ec9072672d3f7180af711b5eed5b82b321848b973b4a41e"));
+	//assert(hashGenesisBlock == uint256("0x0000002bed128b6b2a62bd8edd4e6f8a414eac38e256aa0194adb8c93fe18132"));		
+	//assert(genesis.hashMerkleRoot == uint256("0x24c7b9bada3984f99ec9072672d3f7180af711b5eed5b82b321848b973b4a41e"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,97);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,196);
