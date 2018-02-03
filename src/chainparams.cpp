@@ -11,6 +11,7 @@
 #include "main.h"
 #include "util.h"
 #include "amount.h"
+#include "globals.h"
 
 #include <boost/assign/list_of.hpp>
 
