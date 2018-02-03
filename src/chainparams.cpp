@@ -71,7 +71,6 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
 
 static CBlock CreateGenesisBlock(uint64_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
-//	const char* pszTimestamp = "The Guardian: [2nd Feb 2017] Finsbury Park mosque wins apology and damages from Thomson Reuters";
 	const char* pszTimestamp = "The SuperCellCoin was started at 2018/2/3,based on a new idea of super-cell masternodes.";
 
     const CScript genesisOutputScript = CScript() << ParseHex("045622582bdfad9366cdff9652d35a562af17ea4e3462d32cd988b32919ba2ff4bc806485be5228185ad3f75445039b6e744819c4a63304277ca8d20c99a6acec8") << OP_CHECKSIG;
@@ -96,12 +95,9 @@ public:
         nTargetSpacing = 64;
         nTargetTimespan = 7 * 24 * 60 * 60; // one week
 
-	//genesis = CreateGenesisBlock(1486045800, 28884498, 0x1e00ffff, 1, (1 * COIN));
         genesis = CreateGenesisBlock(GENESIS_BLOCK_TIME, 587849, 0x1e00ffff, 1, (1 * COIN));
 	hashGenesisBlock = genesis.GetHash();
 	
-        //assert(hashGenesisBlock == uint256("0x0000004cf5ffbf2e31a9aa07c86298efb01a30b8911b80af7473d1114715084b"));
-        //assert(genesis.hashMerkleRoot == uint256("0x7af2e961c5262cb0411edcb7414ab7178133fc06257ceb47d349e4e5e35e2d40"));
 	assert(hashGenesisBlock == uint256("0x00000a2c021cda574a5e0e20850d6a7006bdc8add510f14e0e7be998a7850717"));
         assert(genesis.hashMerkleRoot == uint256("0xcb4b6f20de95fe94c7608d7c9dbc66d157faebe8790900e453bb5e645211ef2e"));
 
@@ -165,12 +161,11 @@ public:
         nTargetSpacing = 64;
         nTargetTimespan = 7 * 24 * 60 * 60; // one week
 
-	genesis = CreateGenesisBlock(1491737471, 1603027, 0x1e00ffff, 1, (1 * COIN));
-        
-	hashGenesisBlock = genesis.GetHash();
-	
-	//assert(hashGenesisBlock == uint256("0x0000002bed128b6b2a62bd8edd4e6f8a414eac38e256aa0194adb8c93fe18132"));		
-	//assert(genesis.hashMerkleRoot == uint256("0x24c7b9bada3984f99ec9072672d3f7180af711b5eed5b82b321848b973b4a41e"));
+	genesis = CreateGenesisBlock(GENESIS_BLOCK_TIME, 587849, 0x1e00ffff, 1, (1 * COIN));
+        hashGenesisBlock = genesis.GetHash();
+
+        assert(hashGenesisBlock == uint256("0x00000a2c021cda574a5e0e20850d6a7006bdc8add510f14e0e7be998a7850717"));
+        assert(genesis.hashMerkleRoot == uint256("0xcb4b6f20de95fe94c7608d7c9dbc66d157faebe8790900e453bb5e645211ef2e"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,97);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,196);
