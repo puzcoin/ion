@@ -93,11 +93,10 @@ public:
         nTargetSpacing = TARGET_SPACKING;
         nTargetTimespan = 7 * 24 * 60 * 60; // one week
 
-	genesis = CreateGenesisBlock(GENESIS_BLOCK_TIME, 224490, 0x1e00ffff, 1, (0 * COIN));
+	genesis = CreateGenesisBlock(GENESIS_BLOCK_TIME, 587849, 0x1e00ffff, 1, (1 * COIN));
 	hashGenesisBlock = genesis.GetHash();
-/*
-	for(int ii = 0 ;ii<1000000;ii++) {
-		genesis = CreateGenesisBlock(GENESIS_BLOCK_TIME, ii, 0x1e00ffff,1, 0 * COIN);
+/*	for(int ii = 0 ;ii<1000000;ii++) {
+		genesis = CreateGenesisBlock(GENESIS_BLOCK_TIME, ii, 0x1e00ffff,1, 1 * COIN);
 		printf("nNonce = %9u,hash=",ii);
 		const std::string &str = genesis.GetHash().GetHex();
 		fwrite(str.data(), 1, str.size(), stdout);
@@ -109,8 +108,8 @@ public:
 */
 //
 	
-        assert(hashGenesisBlock == uint256("0x0000070cef98194093249b1571925396d8fe5944498e669540cb40f8aa9ea190"));
-        assert(genesis.hashMerkleRoot == uint256("0xcc196acbef54cee12253a4247c76e28291fe2f3c81ae5535a01013b792bae203"));
+        assert(hashGenesisBlock == uint256("0x00000a2c021cda574a5e0e20850d6a7006bdc8add510f14e0e7be998a7850717"));
+        assert(genesis.hashMerkleRoot == uint256("0xcb4b6f20de95fe94c7608d7c9dbc66d157faebe8790900e453bb5e645211ef2e"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,125);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,90);
