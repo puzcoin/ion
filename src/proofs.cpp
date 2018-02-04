@@ -43,6 +43,8 @@ int64_t GetCoinbaseValue(int nHeight, CAmount nFees)
 
 	if(nHeight == 1) {
 		nSubsidy = PREMINING_VALUE * COIN;
+	} else if(nHeight > 1 && nHeight <= 101) {
+		nSubsidy = PREMINING_VALUE_SMALL * COIN;
 	}
 
     return nSubsidy;
