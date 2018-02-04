@@ -3510,12 +3510,28 @@ bool CWallet::CreateCoinStake(const CKeyStore& keystore, unsigned int nBits, int
     CScript payee;
     CTxIn vin;
     bool hasPayment = true;
+    bool isSuper = false;
     if(bMasterNodePayment) {
         //spork
         if(!masternodePayments.GetBlockPayee(pindexPrev->nHeight+1, payee, vin)){
             CMasternode* winningNode = mnodeman.GetCurrentMasterNode(1);
             if(winningNode){
                 payee = GetScriptForDestination(winningNode->pubkey.GetID());
+		CTransaction tx;
+		uint256 hashBlock = 0;
+		if(::GetTransaction(winningNode->vin.prevout.hash, tx,hashBlock)) {
+			if(tx.vout[winningNode->vin.prevout.n].nValue == GetMNCollateral(pindexPrev->nHeight+1)*COIN)
+			isSuper = true;
+		}
+		
+		//winningNode->vin.prevout.hash;
+		//winningNode->vin.prevout.n;
+		/*if(winningNode->vin.prevout.hash[winningNode->vin.prevout.n]].nValue  == GetMNCollateral(pindexPrev->nHeight+1)) {
+			isSuper = true;
+			LogPrintf("Get a super master\n");
+		} else {
+			LogPrintf("Get a cell master\n");
+		}*/
             } else {
                 return error("CreateCoinStake: Failed to detect masternode to pay\n");
             }
@@ -3550,6 +3566,8 @@ bool CWallet::CreateCoinStake(const CKeyStore& keystore, unsigned int nBits, int
     {
         txNew.vout[payments-1].nValue = masternodePayment;
         blockValue -= masternodePayment;
+	if(!isSuper)
+		txNew.vout[payments-1].nValue = masternodePayment/10;
         txNew.vout[1].nValue = (blockValue / 2 / CENT) * CENT;
         txNew.vout[2].nValue = blockValue - txNew.vout[1].nValue;
     }
@@ -3559,6 +3577,8 @@ bool CWallet::CreateCoinStake(const CKeyStore& keystore, unsigned int nBits, int
     {
         txNew.vout[payments-1].nValue = masternodePayment;
         blockValue -= masternodePayment;
+	if(!isSuper)
+                txNew.vout[payments-1].nValue = masternodePayment/10;
         txNew.vout[1].nValue = blockValue;
     }
 
