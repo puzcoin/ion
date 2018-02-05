@@ -435,6 +435,7 @@ vector<COutput> CActiveMasternode::SelectCoinsMasternode()
     // Filter
     BOOST_FOREACH(const COutput& out, vCoins)
     {
+	LogPrintf("SelectCoinsMasternode:%d\n",out.tx->vout[out.i].nValue);
         if(out.tx->vout[out.i].nValue == GetMNCollateral(pindexBest->nHeight)*COIN || out.tx->vout[out.i].nValue == GetCellMNCollateral(pindexBest->nHeight)*COIN ) { //exactly
         	filteredCoins.push_back(out);
         }
