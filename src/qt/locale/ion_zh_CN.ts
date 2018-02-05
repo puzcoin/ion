@@ -2,12 +2,12 @@
 <context>
     <name>AboutDialog</name>
     <message>
-        <source>About Ion</source>
-        <translation>关于黑币</translation>
+        <source>About SCC</source>
+        <translation>关于超体币</translation>
     </message>
     <message>
-        <source>&lt;b&gt;Ion&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;黑币客户端&lt;/b&gt; 版本</translation>
+        <source>&lt;b&gt;SCC&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;超体币客户端&lt;/b&gt; 版本</translation>
     </message>
     </context>
 <context>
@@ -36,8 +36,8 @@
         <translation>新建地址(&amp;N)</translation>
     </message>
     <message>
-        <source>These are your Ion addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>这是您用来接收支付的黑币地址列表。为不同的支付方建立不同的地址以便于了解支付来源。</translation>
+        <source>These are your SCC addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>这是您用来接收支付的超体币地址列表。为不同的支付方建立不同的地址以便于了解支付来源。</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -48,8 +48,8 @@
         <translation>显示二维码(&amp;Q)</translation>
     </message>
     <message>
-        <source>Sign a message to prove you own a Ion address</source>
-        <translation>对信息进行签名以证明您对该黑币地址的所有权</translation>
+        <source>Sign a message to prove you own a SCC address</source>
+        <translation>对信息进行签名以证明您对该超体币地址的所有权</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -60,8 +60,8 @@
         <translation>从列表中删除选中的地址</translation>
     </message>
     <message>
-        <source>Verify a message to ensure it was signed with a specified Ion address</source>
-        <translation>验证信息以保证其经过指定黑币地址的签名</translation>
+        <source>Verify a message to ensure it was signed with a specified SCC address</source>
+        <translation>验证信息以保证其经过指定超体币地址的签名</translation>
     </message>
     <message>
         <source>&amp;Verify Message</source>
@@ -171,7 +171,7 @@
     </message>
     <message>
         <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR COINS&lt;/b&gt;!</source>
-        <translation>警告：如果您丢失了加密该钱包的密码，其中所有的黑币将会丢失！</translation>
+        <translation>警告：如果您丢失了加密该钱包的密码，其中所有的超体币将会丢失！</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -194,8 +194,8 @@
         <translation>输入钱包的新密码。&lt;br/&gt;使用的密码请至少包含&lt;b&gt;10个以上随机字符&lt;/&gt;，或者是&lt;b&gt;8个以上的单词&lt;/b&gt;。</translation>
     </message>
     <message>
-        <source>Ion will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation>黑币客户端即将关闭以完成加密过程。请记住，加密钱包并不能完全防止您的电子货币被入侵您计算机的木马软件盗窃。</translation>
+        <source>SCC will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation>超体币客户端即将关闭以完成加密过程。请记住，加密钱包并不能完全防止您的电子货币被入侵您计算机的木马软件盗窃。</translation>
     </message>
     <message>
         <source>Wallet encryption failed</source>
@@ -233,7 +233,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>IonGUI</name>
+    <name>SCCGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>消息签名(&amp;M)...</translation>
@@ -267,8 +267,8 @@
         <translation>退出程序</translation>
     </message>
     <message>
-        <source>Show information about Ion</source>
-        <translation>显示关于黑币的信息</translation>
+        <source>Show information about SCC</source>
+        <translation>显示关于超体币的信息</translation>
     </message>
     <message>
         <source>About &amp;Qt</source>
@@ -299,11 +299,11 @@
         <translation>导出(&amp;E)</translation>
     </message>
     <message>
-        <source>Send coins to a Ion address</source>
-        <translation>向指定的地址发送黑币</translation>
+        <source>Send coins to a SCC address</source>
+        <translation>向指定的地址发送超体币</translation>
     </message>
     <message>
-        <source>Modify configuration options for Ion</source>
+        <source>Modify configuration options for SCC</source>
         <translation>更改设置选项</translation>
     </message>
     <message>
@@ -335,16 +335,16 @@
         <translation>验证消息(&amp;V)...</translation>
     </message>
     <message>
-        <source>Ion</source>
-        <translation>黑币</translation>
+        <source>SCC</source>
+        <translation>超体币</translation>
     </message>
     <message>
         <source>Wallet</source>
         <translation>钱包</translation>
     </message>
     <message>
-        <source>&amp;About Ion</source>
-        <translation>关于黑币(&amp;A)</translation>
+        <source>&amp;About SCC</source>
+        <translation>关于超体币(&amp;A)</translation>
     </message>
     <message>
         <source>&amp;Show / Hide</source>
@@ -383,12 +383,12 @@
         <translation>[测试网络]</translation>
     </message>
     <message>
-        <source>Ion client</source>
-        <translation>黑币客户端</translation>
+        <source>SCC client</source>
+        <translation>超体币客户端</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Ion network</source>
-        <translation><numerusform>与黑币网络建立了 %n 个连接</numerusform></translation>
+        <source>%n active connection(s) to SCC network</source>
+        <translation><numerusform>与超体币网络建立了 %n 个连接</numerusform></translation>
     </message>
     <message>
         <source>Staking.&lt;br&gt;Your weight is %1&lt;br&gt;Network weight is %2&lt;br&gt;Expected time to earn reward is %3</source>
@@ -408,7 +408,7 @@
     </message>
     <message>
         <source>Not staking because you don't have mature coins</source>
-        <translation>未进行权益增值，因为钱包中没有成熟的黑币</translation>
+        <translation>未进行权益增值，因为钱包中没有成熟的超体币</translation>
     </message>
     <message>
         <source>&amp;Dashboard</source>
@@ -416,11 +416,11 @@
     </message>
     <message>
         <source>&amp;Receive</source>
-        <translation>接收黑币(&amp;R)</translation>
+        <translation>接收超体币(&amp;R)</translation>
     </message>
     <message>
         <source>&amp;Send</source>
-        <translation>发送黑币(&amp;S)</translation>
+        <translation>发送超体币(&amp;S)</translation>
     </message>
     <message>
         <source>&amp;Unlock Wallet...</source>
@@ -463,8 +463,8 @@ Address: %4
         <translation>URI处理</translation>
     </message>
     <message>
-        <source>URI can not be parsed! This can be caused by an invalid Ion address or malformed URI parameters.</source>
-        <translation>无法解析URI：无效的黑币地址或错误的URI参数。</translation>
+        <source>URI can not be parsed! This can be caused by an invalid SCC address or malformed URI parameters.</source>
+        <translation>无法解析URI：无效的超体币地址或错误的URI参数。</translation>
     </message>
     <message>
         <source>Wallet is &lt;b&gt;not encrypted&lt;/b&gt;</source>
@@ -559,8 +559,8 @@ Address: %4
         <translation>未进行权益增值</translation>
     </message>
     <message>
-        <source>A fatal error occurred. Ion can no longer continue safely and will quit.</source>
-        <translation>发生严重错误，黑币客户端即将关闭。</translation>
+        <source>A fatal error occurred. SCC can no longer continue safely and will quit.</source>
+        <translation>发生严重错误，超体币客户端即将关闭。</translation>
     </message>
 </context>
 <context>
@@ -574,7 +574,7 @@ Address: %4
     <name>CoinControlDialog</name>
     <message>
         <source>Coin Control</source>
-        <translation>黑币控制</translation>
+        <translation>超体币控制</translation>
     </message>
     <message>
         <source>Quantity:</source>
@@ -818,8 +818,8 @@ This label turns red, if the priority is smaller than "medium".
         <translation>输入的地址“%1”已经存在于地址簿中。</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Ion address.</source>
-        <translation>“%1” 不是有效的黑币地址。</translation>
+        <source>The entered address "%1" is not a valid SCC address.</source>
+        <translation>“%1” 不是有效的超体币地址。</translation>
     </message>
     <message>
         <source>Could not unlock wallet.</source>
@@ -834,7 +834,7 @@ This label turns red, if the priority is smaller than "medium".
     <name>GUIUtil::HelpMessageBox</name>
     <message>
         <source>ion-Qt</source>
-        <translation>黑币客户端ion-Qt</translation>
+        <translation>超体币客户端ion-Qt</translation>
     </message>
     <message>
         <source>version</source>
@@ -904,20 +904,20 @@ This label turns red, if the priority is smaller than "medium".
         <translation>保留</translation>
     </message>
     <message>
-        <source>Automatically start Ion after logging in to the system.</source>
-        <translation>开机自动启动黑币客户端</translation>
+        <source>Automatically start SCC after logging in to the system.</source>
+        <translation>开机自动启动超体币客户端</translation>
     </message>
     <message>
-        <source>&amp;Start Ion on system login</source>
-        <translation>开机时自动启动黑币客户端(&amp;S)</translation>
+        <source>&amp;Start SCC on system login</source>
+        <translation>开机时自动启动超体币客户端(&amp;S)</translation>
     </message>
     <message>
         <source>&amp;Network</source>
         <translation>网络(&amp;N)</translation>
     </message>
     <message>
-        <source>Automatically open the Ion client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>路由器自动打开黑币客户端端口。该功能仅在路由器开启UPnP支持时有效。</translation>
+        <source>Automatically open the SCC client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>路由器自动打开超体币客户端端口。该功能仅在路由器开启UPnP支持时有效。</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -968,16 +968,16 @@ This label turns red, if the priority is smaller than "medium".
         <translation>用户界面语言(&amp;L)：</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting Ion.</source>
-        <translation>在此设置用户界面语言。重启黑币客户端后设置生效。</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting SCC.</source>
+        <translation>在此设置用户界面语言。重启超体币客户端后设置生效。</translation>
     </message>
     <message>
         <source>&amp;Unit to show amounts in:</source>
-        <translation>黑币金额单位(&amp;U)：</translation>
+        <translation>超体币金额单位(&amp;U)：</translation>
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>选择黑币单位。</translation>
+        <translation>选择超体币单位。</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -985,7 +985,7 @@ This label turns red, if the priority is smaller than "medium".
     </message>
     <message>
         <source>Display coin &amp;control features (experts only!)</source>
-        <translation>显示黑币控制选项(仅用于专家用户)</translation>
+        <translation>显示超体币控制选项(仅用于专家用户)</translation>
     </message>
     <message>
         <source>&amp;OK</source>
@@ -1008,7 +1008,7 @@ This label turns red, if the priority is smaller than "medium".
         <translation>警告</translation>
     </message>
     <message>
-        <source>This setting will take effect after restarting Ion.</source>
+        <source>This setting will take effect after restarting SCC.</source>
         <translation>重启客户端后设置生效</translation>
     </message>
     <message>
@@ -1023,7 +1023,7 @@ This label turns red, if the priority is smaller than "medium".
         <translation>表单</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Ion network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the SCC network after a connection is established, but this process has not completed yet.</source>
         <translation>所显示的信息尚未更新，建立连接后钱包客户端会自动和网络进行同步，但目前该过程尚未完成。</translation>
     </message>
     <message>
@@ -1202,7 +1202,7 @@ This label turns red, if the priority is smaller than "medium".
         <translation>调试日志文件</translation>
     </message>
     <message>
-        <source>Open the Ion debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <source>Open the SCC debug log file from the current data directory. This can take a few seconds for large log files.</source>
         <translation>打开调试日志文件，对于较大的文件，这可能持续几秒钟。</translation>
     </message>
     <message>
@@ -1210,8 +1210,8 @@ This label turns red, if the priority is smaller than "medium".
         <translation>清空控制台</translation>
     </message>
     <message>
-        <source>Welcome to the Ion RPC console.</source>
-        <translation>欢迎使用黑币RPC控制台。</translation>
+        <source>Welcome to the SCC RPC console.</source>
+        <translation>欢迎使用超体币RPC控制台。</translation>
     </message>
     <message>
         <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
@@ -1491,8 +1491,8 @@ This label turns red, if the priority is smaller than "medium".
         <translation>复制当前签名至剪切板</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Ion address</source>
-        <translation>对该消息进行签名以证明您对该黑币地址的所有权</translation>
+        <source>Sign the message to prove you own this SCC address</source>
+        <translation>对该消息进行签名以证明您对该超体币地址的所有权</translation>
     </message>
     <message>
         <source>Reset all sign message fields</source>
@@ -1512,27 +1512,27 @@ This label turns red, if the priority is smaller than "medium".
     </message>
     <message>
         <source>The address the message was signed with (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>用来签名该消息的黑币地址(例： B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <translation>用来签名该消息的超体币地址(例： B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Ion address</source>
-        <translation>确认该消息以保证它经由指定的黑币地址签名</translation>
+        <source>Verify the message to ensure it was signed with the specified SCC address</source>
+        <translation>确认该消息以保证它经由指定的超体币地址签名</translation>
     </message>
     <message>
         <source>Reset all verify message fields</source>
         <translation>清空所有验证消息栏</translation>
     </message>
     <message>
-        <source>Enter a Ion address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>输入黑币地址(例： B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a SCC address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>输入超体币地址(例： B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
     <message>
         <source>Click "Sign Message" to generate signature</source>
         <translation>单击“签名消息“产生签名。</translation>
     </message>
     <message>
-        <source>Enter Ion signature</source>
-        <translation>输入黑币签名</translation>
+        <source>Enter SCC signature</source>
+        <translation>输入超体币签名</translation>
     </message>
     <message>
         <source>The entered address is invalid.</source>
@@ -1964,16 +1964,16 @@ This label turns red, if the priority is smaller than "medium".
 <context>
     <name>ion-core</name>
     <message>
-        <source>Ion version</source>
-        <translation>黑币客户端 版本</translation>
+        <source>SCC version</source>
+        <translation>超体币客户端 版本</translation>
     </message>
     <message>
         <source>Usage:</source>
         <translation>使用：</translation>
     </message>
     <message>
-        <source>Send command to -server or iond</source>
-        <translation>向-server服务器或iond发送命令</translation>
+        <source>Send command to -server or supercelld</source>
+        <translation>向-server服务器或supercelld发送命令</translation>
     </message>
     <message>
         <source>List commands</source>
@@ -1991,12 +1991,12 @@ This label turns red, if the priority is smaller than "medium".
 </translation>
     </message>
     <message>
-        <source>Specify configuration file (default: ioncoin.conf)</source>
-        <translation>指定配置文件(默认: ioncoin.conf)</translation>
+        <source>Specify configuration file (default: supercellcoin.conf)</source>
+        <translation>指定配置文件(默认: supercellcoin.conf)</translation>
     </message>
     <message>
-        <source>Specify pid file (default: iond.pid)</source>
-        <translation>指定pid文件(默认: iond.pid)</translation>
+        <source>Specify pid file (default: supercelld.pid)</source>
+        <translation>指定pid文件(默认: supercelld.pid)</translation>
     </message>
     <message>
         <source>Specify wallet file (within data directory)</source>
@@ -2017,7 +2017,7 @@ rpcpassword=%s
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s "Ion Alert" admin@foo.com
+for example: alertnotify=echo %%s | mail -s "SCC Alert" admin@foo.com
 </source>
         <translation>%s, 必须在配置文件里设置rpc密码:
  %s
@@ -2028,7 +2028,7 @@ rpcpassword=%s
 用户名和密码不能重复。
 如果该文件不存在，请自行创建并设为用户本身只读权限。
 建议创建提示以监测可能的问题，如：
-alertnotify=echo %%s | mail -s "Ion Alert" admin@foo.com
+alertnotify=echo %%s | mail -s "SCC Alert" admin@foo.com
 </translation>
     </message>
     <message>
@@ -2152,8 +2152,8 @@ alertnotify=echo %%s | mail -s "Ion Alert" admin@foo.com
         <translation>将时间信息加入调试输出中</translation>
     </message>
     <message>
-        <source>SSL options: (see the Ion Wiki for SSL setup instructions)</source>
-        <translation>SSL选项：(参见Ion Wiki关于SSL设置栏目)</translation>
+        <source>SSL options: (see the SCC Wiki for SSL setup instructions)</source>
+        <translation>SSL选项：(参见SCC Wiki关于SSL设置栏目)</translation>
     </message>
     <message>
         <source>Send trace/debug info to console instead of debug.log file</source>
@@ -2311,8 +2311,8 @@ alertnotify=echo %%s | mail -s "Ion Alert" admin@foo.com
 </translation>
     </message>
     <message>
-        <source>Initialization sanity check failed. Ion is shutting down.</source>
-        <translation>初始化完整性检查失败。 黑币客户端即将关闭。</translation>
+        <source>Initialization sanity check failed. SCC is shutting down.</source>
+        <translation>初始化完整性检查失败。 超体币客户端即将关闭。</translation>
     </message>
     <message>
         <source>Error: Wallet unlocked for staking only, unable to create transaction.</source>
@@ -2352,11 +2352,11 @@ alertnotify=echo %%s | mail -s "Ion Alert" admin@foo.com
         <translation>wallet.dat 钱包文件加载出错：钱包损坏</translation>
     </message>
     <message>
-        <source>Error loading wallet.dat: Wallet requires newer version of Ion</source>
+        <source>Error loading wallet.dat: Wallet requires newer version of SCC</source>
         <translation>wallet.dat 钱包文件加载出错：需要新版本的客户端</translation>
     </message>
     <message>
-        <source>Wallet needed to be rewritten: restart Ion to complete</source>
+        <source>Wallet needed to be rewritten: restart SCC to complete</source>
         <translation>需要重写钱包，重启客户端以完成该操作。</translation>
     </message>
     <message>
@@ -2404,8 +2404,8 @@ alertnotify=echo %%s | mail -s "Ion Alert" admin@foo.com
         <translation>添加节点并与其保持连接</translation>
     </message>
     <message>
-        <source>Unable to bind to %s on this computer. Ion is probably already running.</source>
-        <translation>无法绑定到该计算机上的 %s. 黑币客户端可能已在运行中。</translation>
+        <source>Unable to bind to %s on this computer. SCC is probably already running.</source>
+        <translation>无法绑定到该计算机上的 %s. 超体币客户端可能已在运行中。</translation>
     </message>
     <message>
         <source>Fee per KB to add to transactions you send</source>
@@ -2420,8 +2420,8 @@ alertnotify=echo %%s | mail -s "Ion Alert" admin@foo.com
         <translation>无效的数量。 -mininput=&lt;amount&gt;: '%s'</translation>
     </message>
     <message>
-        <source>Cannot obtain a lock on data directory %s. Ion is probably already running.</source>
-        <translation>无法从数据目录 %s 获得锁定.  黑币客户端可能已在运行中.</translation>
+        <source>Cannot obtain a lock on data directory %s. SCC is probably already running.</source>
+        <translation>无法从数据目录 %s 获得锁定.  超体币客户端可能已在运行中.</translation>
     </message>
     <message>
         <source>Error initializing wallet database environment %s!</source>
