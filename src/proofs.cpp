@@ -13,6 +13,7 @@
 #include "amount.h"
 #include "checkpoints.h"
 #include "globals.h"
+
 #include <math.h>
 #include <stdint.h> 
 
@@ -40,11 +41,11 @@ int64_t GetCoinbaseValue(int nHeight, CAmount nFees)
 {
     CAmount nSubsidy = 0;
 
-        if(nHeight == 1) {
-                nSubsidy = PREMINING_VALUE * COIN;
-        } else if(nHeight > 1 && nHeight <= 101) {
-                nSubsidy = PREMINING_VALUE_SMALL * COIN;
-        }
+	if(nHeight == 1) {
+		nSubsidy = PREMINING_VALUE * COIN;
+	} else if(nHeight > 1 && nHeight <= 101) {
+		nSubsidy = PREMINING_VALUE_SMALL * COIN;
+	}
 
     return nSubsidy;
 }
@@ -78,10 +79,9 @@ int64_t GetCoinstakeValue(int64_t nCoinAge, CAmount nFees, int nHeight)
                 nSubsidy = STAKE_VAULE * COIN * 2/10;
         } else if(nHeight <= BLOCK_PER_MONTH*36) {
                 nSubsidy = STAKE_VAULE * COIN * 2/10;
-        }
+	}
     return nSubsidy + nFees;
 }
-
 
 unsigned int GetNextTargetRequired(const CBlockIndex* pindexLast, bool fProofOfStake)
 {
