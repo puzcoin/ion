@@ -2,7 +2,7 @@
  * Qt5 ion GUI.
  *
  * W.J. van der Laan 2011-2012
- * The Ion Developers 2011-2012
+ * The SCC Developers 2011-2012
  */
 
 #if defined(HAVE_CONFIG_H)
@@ -78,7 +78,7 @@ extern CWallet* pwalletMain;
 extern int64_t nLastCoinStakeSearchInterval;
 double GetPoSKernelPS();
 
-IonGUI::IonGUI(QWidget *parent):
+SCCGUI::SCCGUI(QWidget *parent):
     QMainWindow(parent),
     clientModel(0),
     walletModel(0),
@@ -98,7 +98,7 @@ IonGUI::IonGUI(QWidget *parent):
     nWeight(0)
 {
     resize(1024, 520);
-    setWindowTitle(tr("Ion") + " - " + tr("Wallet"));
+    setWindowTitle(tr("SCC") + " - " + tr("Wallet"));
 #ifndef Q_OS_MAC
     qApp->setWindowIcon(QIcon(":icons/ion"));
     setWindowIcon(QIcon(":icons/ion"));
@@ -245,7 +245,7 @@ IonGUI::IonGUI(QWidget *parent):
     gotoOverviewPage();
 }
 
-IonGUI::~IonGUI()
+SCCGUI::~SCCGUI()
 {
     if(trayIcon) // Hide tray icon, as deleting will let it linger until quit (on Ubuntu)
         trayIcon->hide();
@@ -257,7 +257,7 @@ IonGUI::~IonGUI()
     delete rpcConsole;
 }
 
-void IonGUI::createActions()
+void SCCGUI::createActions()
 {
     QActionGroup *tabGroup = new QActionGroup(this);
 
@@ -274,7 +274,7 @@ void IonGUI::createActions()
     tabGroup->addAction(receiveCoinsAction);
 
     sendCoinsAction = new QAction(QIcon(":/icons/send"), tr("&Send"), this);
-    sendCoinsAction->setToolTip(tr("Send coins to a Ion address"));
+    sendCoinsAction->setToolTip(tr("Send coins to a SCC address"));
     sendCoinsAction->setCheckable(true);
     sendCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_3));
     tabGroup->addAction(sendCoinsAction);
@@ -321,14 +321,14 @@ void IonGUI::createActions()
     quitAction->setToolTip(tr("Quit application"));
     quitAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_Q));
     quitAction->setMenuRole(QAction::QuitRole);
-    aboutAction = new QAction(tr("&About Ion"), this);
-    aboutAction->setToolTip(tr("Show information about Ion"));
+    aboutAction = new QAction(tr("&About SCC"), this);
+    aboutAction->setToolTip(tr("Show information about SCC"));
     aboutAction->setMenuRole(QAction::AboutRole);
     aboutQtAction = new QAction(tr("About &Qt"), this);
     aboutQtAction->setToolTip(tr("Show information about Qt"));
     aboutQtAction->setMenuRole(QAction::AboutQtRole);
     optionsAction = new QAction(tr("&Options..."), this);
-    optionsAction->setToolTip(tr("Modify configuration options for Ion"));
+    optionsAction->setToolTip(tr("Modify configuration options for SCC"));
     optionsAction->setMenuRole(QAction::PreferencesRole);
     toggleHideAction = new QAction(QIcon(":/icons/ion"), tr("&Show / Hide"), this);
     encryptWalletAction = new QAction(tr("&Encrypt Wallet..."), this);
@@ -363,7 +363,7 @@ void IonGUI::createActions()
     connect(verifyMessageAction, SIGNAL(triggered()), this, SLOT(gotoVerifyMessageTab()));
 }
 
-void IonGUI::createMenuBar()
+void SCCGUI::createMenuBar()
 {
 #ifdef Q_OS_MAC
     appMenuBar = new QMenuBar();
@@ -405,7 +405,7 @@ static QWidget* makeToolBarSpacer()
     return spacer;
 }
 
-void IonGUI::createToolBars()
+void SCCGUI::createToolBars()
 {
     fLiteMode = GetBoolArg("-litemode", false);
 
@@ -433,7 +433,7 @@ void IonGUI::createToolBars()
     }
 }
 
-void IonGUI::setClientModel(ClientModel *clientModel)
+void SCCGUI::setClientModel(ClientModel *clientModel)
 {
     this->clientModel = clientModel;
     if(clientModel)
@@ -450,7 +450,7 @@ void IonGUI::setClientModel(ClientModel *clientModel)
 #endif
             if(trayIcon)
             {
-                trayIcon->setToolTip(tr("Ion client") + QString(" ") + tr("[testnet]"));
+                trayIcon->setToolTip(tr("SCC client") + QString(" ") + tr("[testnet]"));
                 trayIcon->setIcon(QIcon(":/icons/toolbar_testnet"));
                 toggleHideAction->setIcon(QIcon(":/icons/toolbar_testnet"));
             }
@@ -477,7 +477,7 @@ void IonGUI::setClientModel(ClientModel *clientModel)
     }
 }
 
-void IonGUI::setWalletModel(WalletModel *walletModel)
+void SCCGUI::setWalletModel(WalletModel *walletModel)
 {
     this->walletModel = walletModel;
     if(walletModel)
@@ -507,14 +507,14 @@ void IonGUI::setWalletModel(WalletModel *walletModel)
     }
 }
 
-void IonGUI::createTrayIcon()
+void SCCGUI::createTrayIcon()
 {
     QMenu *trayIconMenu;
 #ifndef Q_OS_MAC
     trayIcon = new QSystemTrayIcon(this);
     trayIconMenu = new QMenu(this);
     trayIcon->setContextMenu(trayIconMenu);
-    trayIcon->setToolTip(tr("Ion client"));
+    trayIcon->setToolTip(tr("SCC client"));
     trayIcon->setIcon(QIcon(":/icons/toolbar"));
     connect(trayIcon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)),
             this, SLOT(trayIconActivated(QSystemTrayIcon::ActivationReason)));
@@ -548,7 +548,7 @@ void IonGUI::createTrayIcon()
 }
 
 #ifndef Q_OS_MAC
-void IonGUI::trayIconActivated(QSystemTrayIcon::ActivationReason reason)
+void SCCGUI::trayIconActivated(QSystemTrayIcon::ActivationReason reason)
 {
     if(reason == QSystemTrayIcon::Trigger)
     {
@@ -558,7 +558,7 @@ void IonGUI::trayIconActivated(QSystemTrayIcon::ActivationReason reason)
 }
 #endif
 
-void IonGUI::optionsClicked()
+void SCCGUI::optionsClicked()
 {
     if(!clientModel || !clientModel->getOptionsModel())
         return;
@@ -567,14 +567,14 @@ void IonGUI::optionsClicked()
     dlg.exec();
 }
 
-void IonGUI::aboutClicked()
+void SCCGUI::aboutClicked()
 {
     AboutDialog dlg;
     dlg.setModel(clientModel);
     dlg.exec();
 }
 
-void IonGUI::setNumConnections(int count)
+void SCCGUI::setNumConnections(int count)
 {
     QString icon;
     switch(count)
@@ -586,10 +586,10 @@ void IonGUI::setNumConnections(int count)
     default: icon = ":/icons/connect_4"; break;
     }
     labelConnectionsIcon->setPixmap(QIcon(icon).pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
-    labelConnectionsIcon->setToolTip(tr("%n active connection(s) to Ion network", "", count));
+    labelConnectionsIcon->setToolTip(tr("%n active connection(s) to SCC network", "", count));
 }
 
-void IonGUI::setNumBlocks(int count)
+void SCCGUI::setNumBlocks(int count)
 {
     QString tooltip;
 
@@ -669,9 +669,9 @@ void IonGUI::setNumBlocks(int count)
     statusBar()->setVisible(true);
 }
 
-void IonGUI::message(const QString &title, const QString &message, bool modal, unsigned int style)
+void SCCGUI::message(const QString &title, const QString &message, bool modal, unsigned int style)
 {
-    QString strTitle = tr("Ion") + " - ";
+    QString strTitle = tr("SCC") + " - ";
     // Default to information icon
     int nMBoxIcon = QMessageBox::Information;
     int nNotifyIcon = Notificator::Information;
@@ -715,7 +715,7 @@ void IonGUI::message(const QString &title, const QString &message, bool modal, u
         notificator->notify((Notificator::Class)nNotifyIcon, strTitle, message);
 }
 
-void IonGUI::error(const QString &title, const QString &message, bool modal)
+void SCCGUI::error(const QString &title, const QString &message, bool modal)
 {
     // Report errors from network/worker thread
     if(modal)
@@ -726,7 +726,7 @@ void IonGUI::error(const QString &title, const QString &message, bool modal)
     }
 }
 
-void IonGUI::changeEvent(QEvent *e)
+void SCCGUI::changeEvent(QEvent *e)
 {
     QMainWindow::changeEvent(e);
 #ifndef Q_OS_MAC // Ignored on Mac
@@ -745,7 +745,7 @@ void IonGUI::changeEvent(QEvent *e)
 #endif
 }
 
-void IonGUI::closeEvent(QCloseEvent *event)
+void SCCGUI::closeEvent(QCloseEvent *event)
 {
     if(clientModel)
     {
@@ -763,21 +763,21 @@ void IonGUI::closeEvent(QCloseEvent *event)
     QMainWindow::closeEvent(event);
 }
 
-void IonGUI::askFee(qint64 nFeeRequired, bool *payFee)
+void SCCGUI::askFee(qint64 nFeeRequired, bool *payFee)
 {
     if (!clientModel || !clientModel->getOptionsModel())
         return;
 
     QString strMessage = tr("This transaction is over the size limit. You can still send it for a fee of %1, "
         "which goes to the nodes that process your transaction and helps to support the network. "
-        "Do you want to pay the fee?").arg(IonUnits::formatWithUnit(clientModel->getOptionsModel()->getDisplayUnit(), nFeeRequired));
+        "Do you want to pay the fee?").arg(SCCUnits::formatWithUnit(clientModel->getOptionsModel()->getDisplayUnit(), nFeeRequired));
     QMessageBox::StandardButton retval = QMessageBox::question(
           this, tr("Confirm transaction fee"), strMessage,
           QMessageBox::Yes|QMessageBox::Cancel, QMessageBox::Yes);
     *payFee = (retval == QMessageBox::Yes);
 }
 
-void IonGUI::incomingTransaction(const QModelIndex & parent, int start, int end)
+void SCCGUI::incomingTransaction(const QModelIndex & parent, int start, int end)
 {
 	// Prevent balloon-spam when initial block download is in progress
     if(!walletModel || !clientModel || clientModel->inInitialBlockDownload() || walletModel->processingQueuedTransactions())
@@ -805,12 +805,12 @@ void IonGUI::incomingTransaction(const QModelIndex & parent, int start, int end)
                              "Type: %3\n"
                              "Address: %4\n")
                           .arg(date)
-                          .arg(IonUnits::formatWithUnit(walletModel->getOptionsModel()->getDisplayUnit(), amount, true))
+                          .arg(SCCUnits::formatWithUnit(walletModel->getOptionsModel()->getDisplayUnit(), amount, true))
                           .arg(type)
                           .arg(address), icon);
 }
 
-void IonGUI::clearWidgets()
+void SCCGUI::clearWidgets()
 {
     centralStackedWidget->setCurrentWidget(centralStackedWidget->widget(0));
     for(int i = centralStackedWidget->count(); i>0; i--){
@@ -820,7 +820,7 @@ void IonGUI::clearWidgets()
     }
 }
 
-void IonGUI::gotoMasternodeManagerPage()
+void SCCGUI::gotoMasternodeManagerPage()
 {
     masternodeManagerAction->setChecked(true);
     centralStackedWidget->setCurrentWidget(masternodeManagerPage);
@@ -829,7 +829,7 @@ void IonGUI::gotoMasternodeManagerPage()
     disconnect(exportAction, SIGNAL(triggered()), 0, 0);
 }
 
-void IonGUI::gotoOverviewPage()
+void SCCGUI::gotoOverviewPage()
 {
     overviewAction->setChecked(true);
     centralStackedWidget->setCurrentWidget(overviewPage);
@@ -838,7 +838,7 @@ void IonGUI::gotoOverviewPage()
     disconnect(exportAction, SIGNAL(triggered()), 0, 0);
 }
 
-void IonGUI::gotoHistoryPage()
+void SCCGUI::gotoHistoryPage()
 {
     historyAction->setChecked(true);
     centralStackedWidget->setCurrentWidget(transactionsPage);
@@ -848,7 +848,7 @@ void IonGUI::gotoHistoryPage()
     connect(exportAction, SIGNAL(triggered()), transactionView, SLOT(exportClicked()));
 }
 
-void IonGUI::gotoAddressBookPage()
+void SCCGUI::gotoAddressBookPage()
 {
     addressBookAction->setChecked(true);
     centralStackedWidget->setCurrentWidget(addressBookPage);
@@ -858,7 +858,7 @@ void IonGUI::gotoAddressBookPage()
     connect(exportAction, SIGNAL(triggered()), addressBookPage, SLOT(exportClicked()));
 }
 
-void IonGUI::gotoReceiveCoinsPage()
+void SCCGUI::gotoReceiveCoinsPage()
 {
     receiveCoinsAction->setChecked(true);
     centralStackedWidget->setCurrentWidget(receiveCoinsPage);
@@ -868,7 +868,7 @@ void IonGUI::gotoReceiveCoinsPage()
     connect(exportAction, SIGNAL(triggered()), receiveCoinsPage, SLOT(exportClicked()));
 }
 
-void IonGUI::gotoSendCoinsPage()
+void SCCGUI::gotoSendCoinsPage()
 {
     sendCoinsAction->setChecked(true);
     centralStackedWidget->setCurrentWidget(sendCoinsPage);
@@ -877,7 +877,7 @@ void IonGUI::gotoSendCoinsPage()
     disconnect(exportAction, SIGNAL(triggered()), 0, 0);
 }
 
-void IonGUI::gotoSignMessageTab(QString addr)
+void SCCGUI::gotoSignMessageTab(QString addr)
 {
     // call show() in showTab_SM()
     signVerifyMessageDialog->showTab_SM(true);
@@ -886,7 +886,7 @@ void IonGUI::gotoSignMessageTab(QString addr)
         signVerifyMessageDialog->setAddress_SM(addr);
 }
 
-void IonGUI::gotoVerifyMessageTab(QString addr)
+void SCCGUI::gotoVerifyMessageTab(QString addr)
 {
     // call show() in showTab_VM()
     signVerifyMessageDialog->showTab_VM(true);
@@ -896,20 +896,20 @@ void IonGUI::gotoVerifyMessageTab(QString addr)
 }
 
 
-void IonGUI::gotoMultisigPage()
+void SCCGUI::gotoMultisigPage()
 {
     multisigPage->show();
     multisigPage->setFocus();
 }
 
-void IonGUI::dragEnterEvent(QDragEnterEvent *event)
+void SCCGUI::dragEnterEvent(QDragEnterEvent *event)
 {
     // Accept only URIs
     if(event->mimeData()->hasUrls())
         event->acceptProposedAction();
 }
 
-void IonGUI::dropEvent(QDropEvent *event)
+void SCCGUI::dropEvent(QDropEvent *event)
 {
     if(event->mimeData()->hasUrls())
     {
@@ -925,13 +925,13 @@ void IonGUI::dropEvent(QDropEvent *event)
         if (nValidUrisFound)
             gotoSendCoinsPage();
         else
-            notificator->notify(Notificator::Warning, tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid Ion address or malformed URI parameters."));
+            notificator->notify(Notificator::Warning, tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid SCC address or malformed URI parameters."));
     }
 
     event->acceptProposedAction();
 }
 
-void IonGUI::handleURI(QString strURI)
+void SCCGUI::handleURI(QString strURI)
 {
     // URI has to be valid
     if (sendCoinsPage->handleURI(strURI))
@@ -940,10 +940,10 @@ void IonGUI::handleURI(QString strURI)
         gotoSendCoinsPage();
     }
     else
-        notificator->notify(Notificator::Warning, tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid Ion address or malformed URI parameters."));
+        notificator->notify(Notificator::Warning, tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid SCC address or malformed URI parameters."));
 }
 
-void IonGUI::setEncryptionStatus(int status)
+void SCCGUI::setEncryptionStatus(int status)
 {
     if(fWalletUnlockStakingOnly)
     {
@@ -989,7 +989,7 @@ void IonGUI::setEncryptionStatus(int status)
     }
 }
 
-void IonGUI::encryptWallet()
+void SCCGUI::encryptWallet()
 {
     if(!walletModel)
         return;
@@ -1001,7 +1001,7 @@ void IonGUI::encryptWallet()
     setEncryptionStatus(walletModel->getEncryptionStatus());
 }
 
-void IonGUI::backupWallet()
+void SCCGUI::backupWallet()
 {
     QString saveDir = QDesktopServices::storageLocation(QDesktopServices::DocumentsLocation);
     QString filename = QFileDialog::getSaveFileName(this, tr("Backup Wallet"), saveDir, tr("Wallet Data (*.dat)"));
@@ -1012,14 +1012,14 @@ void IonGUI::backupWallet()
     }
 }
 
-void IonGUI::changePassphrase()
+void SCCGUI::changePassphrase()
 {
     AskPassphraseDialog dlg(AskPassphraseDialog::ChangePass, this);
     dlg.setModel(walletModel);
     dlg.exec();
 }
 
-void IonGUI::unlockWallet()
+void SCCGUI::unlockWallet()
 {
     if(!walletModel)
         return;
@@ -1034,7 +1034,7 @@ void IonGUI::unlockWallet()
     }
 }
 
-void IonGUI::lockWallet()
+void SCCGUI::lockWallet()
 {
     if(!walletModel)
         return;
@@ -1042,7 +1042,7 @@ void IonGUI::lockWallet()
     walletModel->setWalletLocked(true);
 }
 
-void IonGUI::showNormalIfMinimized(bool fToggleHidden)
+void SCCGUI::showNormalIfMinimized(bool fToggleHidden)
 {
     // activateWindow() (sometimes) helps with keyboard focus on Windows
     if (isHidden())
@@ -1064,12 +1064,12 @@ void IonGUI::showNormalIfMinimized(bool fToggleHidden)
         hide();
 }
 
-void IonGUI::toggleHidden()
+void SCCGUI::toggleHidden()
 {
     showNormalIfMinimized(true);
 }
 
-void IonGUI::updateWeight()
+void SCCGUI::updateWeight()
 {
     if (!pwalletMain)
         return;
@@ -1085,7 +1085,7 @@ void IonGUI::updateWeight()
     nWeight = pwalletMain->GetStakeWeight();
 }
 
-void IonGUI::updateStakingIcon()
+void SCCGUI::updateStakingIcon()
 {
     updateWeight();
 
@@ -1136,13 +1136,13 @@ void IonGUI::updateStakingIcon()
     }
 }
 
-void IonGUI::detectShutdown()
+void SCCGUI::detectShutdown()
 {
     if (ShutdownRequested())
         QMetaObject::invokeMethod(QCoreApplication::instance(), "quit", Qt::QueuedConnection);
 }
 
-void IonGUI::showProgress(const QString &title, int nProgress)
+void SCCGUI::showProgress(const QString &title, int nProgress)
 {
     if (nProgress == 0)
     {
