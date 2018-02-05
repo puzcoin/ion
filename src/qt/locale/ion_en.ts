@@ -5,13 +5,13 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About Ion</source>
-        <translation>About Ion</translation>
+        <source>About SCC</source>
+        <translation>About SCC</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;Ion&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;Ion&lt;/b&gt; version</translation>
+        <source>&lt;b&gt;SCC&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;SCC&lt;/b&gt; version</translation>
     </message>
     <message>
         <location line="+41"/>
@@ -19,7 +19,8 @@
 Copyright (c) 2011-2012 Peercoin (PPCoin) Developers
 Copyright (c) 2013-2014 The NovaCoin developers
 Copyright (c) 2014-2015 Transfer Developers
-Copyright (c) 2016-2017 The ion Core developers</source>
+Copyright (c) 2016-2017 The ion Core developers
+Copyright (c) 2016-2017 The SuperCellCoin developers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -37,7 +38,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <name>AddEditAtomNode</name>
     <message>
         <location filename="../forms/addeditatomnode.ui" line="+14"/>
-        <source>Add/Edit Ion Node</source>
+        <source>Add/Edit SCC Node</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -124,8 +125,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-43"/>
-        <source>These are your Ion addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>These are your Ion addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</translation>
+        <source>These are your SCC addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>These are your SCC addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</translation>
     </message>
     <message>
         <location line="+53"/>
@@ -139,8 +140,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign a message to prove you own a Ion address</source>
-        <translation>Sign a message to prove you own a Ion address</translation>
+        <source>Sign a message to prove you own a SCC address</source>
+        <translation>Sign a message to prove you own a SCC address</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -154,8 +155,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-10"/>
-        <source>Verify a message to ensure it was signed with a specified Ion address</source>
-        <translation>Verify a message to ensure it was signed with a specified Ion address</translation>
+        <source>Verify a message to ensure it was signed with a specified SCC address</source>
+        <translation>Verify a message to ensure it was signed with a specified SCC address</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -322,8 +323,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+82"/>
-        <source>Ion will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
-        <translation>Ion will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</translation>
+        <source>SCC will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</source>
+        <translation>SCC will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your coins from being stolen by malware infecting your computer.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -376,7 +377,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+6"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This pane shows an example ioncoin.conf template with the necessary masternode settings.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This pane shows an example supercellcoin.conf template with the necessary masternode settings.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -394,7 +395,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
 </context>
 <context>
-    <name>IonGUI</name>
+    <name>SCCGUI</name>
     <message>
         <location filename="../iongui.cpp" line="+339"/>
         <source>Sign &amp;message...</source>
@@ -437,8 +438,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about Ion</source>
-        <translation>Show information about Ion</translation>
+        <source>Show information about SCC</source>
+        <translation>Show information about SCC</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -477,13 +478,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-70"/>
-        <source>Send coins to a Ion address</source>
-        <translation>Send coins to a Ion address</translation>
+        <source>Send coins to a SCC address</source>
+        <translation>Send coins to a SCC address</translation>
     </message>
     <message>
         <location line="+54"/>
-        <source>Modify configuration options for Ion</source>
-        <translation>Modify configuration options for Ion</translation>
+        <source>Modify configuration options for SCC</source>
+        <translation>Modify configuration options for SCC</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -523,8 +524,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-243"/>
         <location line="+572"/>
-        <source>Ion</source>
-        <translation>Ion</translation>
+        <source>SCC</source>
+        <translation>SCC</translation>
     </message>
     <message>
         <location line="-572"/>
@@ -533,8 +534,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+222"/>
-        <source>&amp;About Ion</source>
-        <translation>&amp;About Ion</translation>
+        <source>&amp;About SCC</source>
+        <translation>&amp;About SCC</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -585,15 +586,15 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+0"/>
         <location line="+64"/>
-        <source>Ion client</source>
-        <translation>Ion client</translation>
+        <source>SCC client</source>
+        <translation>SCC client</translation>
     </message>
     <message numerus="yes">
         <location line="+72"/>
-        <source>%n active connection(s) to Ion network</source>
+        <source>%n active connection(s) to SCC network</source>
         <translation>
-            <numerusform>%n active connection to Ion network</numerusform>
-            <numerusform>%n active connections to Ion network</numerusform>
+            <numerusform>%n active connection to SCC network</numerusform>
+            <numerusform>%n active connections to SCC network</numerusform>
         </translation>
     </message>
     <message>
@@ -718,8 +719,8 @@ Address: %4
     <message>
         <location line="-15"/>
         <location line="+15"/>
-        <source>URI can not be parsed! This can be caused by an invalid Ion address or malformed URI parameters.</source>
-        <translation>URI can not be parsed! This can be caused by an invalid Ion address or malformed URI parameters.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid SCC address or malformed URI parameters.</source>
+        <translation>URI can not be parsed! This can be caused by an invalid SCC address or malformed URI parameters.</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -864,8 +865,8 @@ Address: %4
     </message>
     <message>
         <location filename="../ion.cpp" line="+105"/>
-        <source>A fatal error occurred. Ion can no longer continue safely and will quit.</source>
-        <translation>A fatal error occurred. Ion can no longer continue safely and will quit.</translation>
+        <source>A fatal error occurred. SCC can no longer continue safely and will quit.</source>
+        <translation>A fatal error occurred. SCC can no longer continue safely and will quit.</translation>
     </message>
 </context>
 <context>
@@ -1216,17 +1217,17 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="-29"/>
-        <source>Stashedsend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Ion&apos;s configuration screen.</source>
+        <source>Stashedsend was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening SCC&apos;s configuration screen.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+15"/>
-        <source>Stashedsend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Ion&apos;s configuration screen.</source>
+        <source>Stashedsend was successfully set to high (%1 and 8 rounds). You can change this at any time by opening SCC&apos;s configuration screen.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+15"/>
-        <source>Stashedsend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Ion&apos;s configuration screen.</source>
+        <source>Stashedsend was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening SCC&apos;s configuration screen.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1299,8 +1300,8 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid Ion address.</source>
-        <translation>The entered address &quot;%1&quot; is not a valid Ion address.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid SCC address.</source>
+        <translation>The entered address &quot;%1&quot; is not a valid SCC address.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1366,7 +1367,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+27"/>
-        <source>Ion Network</source>
+        <source>SCC Network</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1396,7 +1397,7 @@ This label turns red, if the priority is smaller than &quot;medium&quot;.
     </message>
     <message>
         <location line="+13"/>
-        <source>Ion Node Count:</source>
+        <source>SCC Node Count:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1817,13 +1818,13 @@ Please unlock your wallet before continuing</source>
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start Ion after logging in to the system.</source>
-        <translation>Automatically start Ion after logging in to the system.</translation>
+        <source>Automatically start SCC after logging in to the system.</source>
+        <translation>Automatically start SCC after logging in to the system.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Ion on system login</source>
-        <translation>&amp;Start Ion on system login</translation>
+        <source>&amp;Start SCC on system login</source>
+        <translation>&amp;Start SCC on system login</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -1842,7 +1843,7 @@ Please unlock your wallet before continuing</source>
     </message>
     <message>
         <location line="+15"/>
-        <source>Amount of Ion to keep anonymized</source>
+        <source>Amount of SCC to keep anonymized</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1852,8 +1853,8 @@ Please unlock your wallet before continuing</source>
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Ion client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatically open the Ion client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
+        <source>Automatically open the SCC client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatically open the SCC client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1862,7 +1863,7 @@ Please unlock your wallet before continuing</source>
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the Ion network through a SOCKS5 proxy (e.g. when connecting through Tor).</source>
+        <source>Connect to the SCC network through a SOCKS5 proxy (e.g. when connecting through Tor).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1927,8 +1928,8 @@ Please unlock your wallet before continuing</source>
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Ion.</source>
-        <translation>The user interface language can be set here. This setting will take effect after restarting Ion.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting SCC.</source>
+        <translation>The user interface language can be set here. This setting will take effect after restarting SCC.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1979,8 +1980,8 @@ Please unlock your wallet before continuing</source>
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting Ion.</source>
-        <translation>This setting will take effect after restarting Ion.</translation>
+        <source>This setting will take effect after restarting SCC.</source>
+        <translation>This setting will take effect after restarting SCC.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -2004,8 +2005,8 @@ Please unlock your wallet before continuing</source>
         <location line="+10"/>
         <location line="+424"/>
         <location line="+681"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Ion network after a connection is established, but this process has not completed yet.</source>
-        <translation>The displayed information may be out of date. Your wallet automatically synchronizes with the Ion network after a connection is established, but this process has not completed yet.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the SCC network after a connection is established, but this process has not completed yet.</source>
+        <translation>The displayed information may be out of date. Your wallet automatically synchronizes with the SCC network after a connection is established, but this process has not completed yet.</translation>
     </message>
     <message>
         <location line="-1060"/>
@@ -2684,8 +2685,8 @@ Please unlock your wallet before continuing</source>
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the Ion debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Open the Ion debug log file from the current data directory. This can take a few seconds for large log files.</translation>
+        <source>Open the SCC debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Open the SCC debug log file from the current data directory. This can take a few seconds for large log files.</translation>
     </message>
     <message>
         <location line="+76"/>
@@ -2694,8 +2695,8 @@ Please unlock your wallet before continuing</source>
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-375"/>
-        <source>Welcome to the Ion RPC console.</source>
-        <translation>Welcome to the Ion RPC console.</translation>
+        <source>Welcome to the SCC RPC console.</source>
+        <translation>Welcome to the SCC RPC console.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2957,7 +2958,7 @@ Please unlock your wallet before continuing</source>
     </message>
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-542"/>
-        <source>Enter a Ion address (e.g. iURTDp3LdR98Cufh9BbSSqUPJFEtPKSLSe)</source>
+        <source>Enter a SCC address (e.g. iURTDp3LdR98Cufh9BbSSqUPJFEtPKSLSe)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3075,7 +3076,7 @@ Please unlock your wallet before continuing</source>
     </message>
     <message>
         <location line="+112"/>
-        <source>Warning: Invalid Ion address</source>
+        <source>Warning: Invalid SCC address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3200,7 +3201,7 @@ Please unlock your wallet manually or wait for StashedSend mixing to complete be
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Ion address (e.g. iURTDp3LdR98Cufh9BbSSqUPJFEtPKSLSe)</source>
+        <source>Enter a SCC address (e.g. iURTDp3LdR98Cufh9BbSSqUPJFEtPKSLSe)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3261,8 +3262,8 @@ Please unlock your wallet manually or wait for StashedSend mixing to complete be
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Ion address</source>
-        <translation>Sign the message to prove you own this Ion address</translation>
+        <source>Sign the message to prove you own this SCC address</source>
+        <translation>Sign the message to prove you own this SCC address</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -3293,8 +3294,8 @@ Please unlock your wallet manually or wait for StashedSend mixing to complete be
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified Ion address</source>
-        <translation>Verify the message to ensure it was signed with the specified Ion address</translation>
+        <source>Verify the message to ensure it was signed with the specified SCC address</source>
+        <translation>Verify the message to ensure it was signed with the specified SCC address</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -3304,8 +3305,8 @@ Please unlock your wallet manually or wait for StashedSend mixing to complete be
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Ion address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
-        <translation>Enter a Ion address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
+        <source>Enter a SCC address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</source>
+        <translation>Enter a SCC address (e.g. B8gZqgY4r2RoEdqYk3QsAqFckyf9pRHN6i)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -3314,8 +3315,8 @@ Please unlock your wallet manually or wait for StashedSend mixing to complete be
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter Ion signature</source>
-        <translation>Enter Ion signature</translation>
+        <source>Enter SCC signature</source>
+        <translation>Enter SCC signature</translation>
     </message>
     <message>
         <location line="+85"/>
@@ -4046,8 +4047,8 @@ Please unlock your wallet manually or wait for StashedSend mixing to complete be
     <name>ion-core</name>
     <message>
         <location filename="../ionstrings.cpp" line="+216"/>
-        <source>Ion version</source>
-        <translation>Ion version</translation>
+        <source>SCC version</source>
+        <translation>SCC version</translation>
     </message>
     <message>
         <location line="+88"/>
@@ -4166,7 +4167,7 @@ Please unlock your wallet manually or wait for StashedSend mixing to complete be
     </message>
     <message>
         <location line="+12"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Ion will not work properly.</source>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong SCC will not work properly.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4351,7 +4352,7 @@ Please unlock your wallet manually or wait for StashedSend mixing to complete be
     </message>
     <message>
         <location line="+2"/>
-        <source>Keep N Ion anonymized (default: 0)</source>
+        <source>Keep N SCC anonymized (default: 0)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4506,8 +4507,8 @@ Please unlock your wallet manually or wait for StashedSend mixing to complete be
     </message>
     <message>
         <location line="+1"/>
-        <source>Specify configuration file (default: ioncoin.conf)</source>
-        <translation>Specify configuration file (default: ioncoin.conf)</translation>
+        <source>Specify configuration file (default: supercellcoin.conf)</source>
+        <translation>Specify configuration file (default: supercellcoin.conf)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -4540,7 +4541,7 @@ rpcpassword=%s
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Ion Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;SCC Alert&quot; admin@foo.com
 </source>
         <translation type="unfinished"></translation>
     </message>
@@ -4696,8 +4697,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Ion Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+6"/>
-        <source>SSL options: (see the Ion Wiki for SSL setup instructions)</source>
-        <translation>SSL options: (see the Ion Wiki for SSL setup instructions)</translation>
+        <source>SSL options: (see the SCC Wiki for SSL setup instructions)</source>
+        <translation>SSL options: (see the SCC Wiki for SSL setup instructions)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -5001,7 +5002,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Ion Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="-60"/>
-        <source>Initialization sanity check failed. Ion is shutting down.</source>
+        <source>Initialization sanity check failed. SCC is shutting down.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5051,8 +5052,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Ion Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Ion</source>
-        <translation>Error loading wallet.dat: Wallet requires newer version of Ion</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of SCC</source>
+        <translation>Error loading wallet.dat: Wallet requires newer version of SCC</translation>
     </message>
     <message>
         <location line="+140"/>
@@ -5061,8 +5062,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Ion Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+1"/>
-        <source>Wallet needed to be rewritten: restart Ion to complete</source>
-        <translation>Wallet needed to be rewritten: restart Ion to complete</translation>
+        <source>Wallet needed to be rewritten: restart SCC to complete</source>
+        <translation>Wallet needed to be rewritten: restart SCC to complete</translation>
     </message>
     <message>
         <location line="-143"/>
@@ -5121,8 +5122,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Ion Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+155"/>
-        <source>Unable to bind to %s on this computer. Ion is probably already running.</source>
-        <translation>Unable to bind to %s on this computer. Ion is probably already running.</translation>
+        <source>Unable to bind to %s on this computer. SCC is probably already running.</source>
+        <translation>Unable to bind to %s on this computer. SCC is probably already running.</translation>
     </message>
     <message>
         <location line="-110"/>
@@ -5151,7 +5152,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Ion Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="-163"/>
-        <source>Cannot obtain a lock on data directory %s. Ion is probably already running.</source>
+        <source>Cannot obtain a lock on data directory %s. SCC is probably already running.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
