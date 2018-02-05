@@ -12,7 +12,7 @@
 #include "util.h"
 #include "amount.h"
 #include "checkpoints.h"
-
+#include "globals.h"
 #include <math.h>
 #include <stdint.h> 
 
